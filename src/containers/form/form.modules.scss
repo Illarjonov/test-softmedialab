@@ -1,0 +1,121 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: var(--text-normal, 1.3rem);
+    color: var(--text-title-color, gray);
+    font-weight: 700;
+
+    &--active {
+      color: var(--text-color, black);
+    }
+  }
+
+  &__radio-box {
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 1rem;
+    margin-block-start: 1rem;
+  }
+
+  &__radio-item {
+    display: flex;
+    color: var(--text-color, black);
+    font-size: var(--text-large, 1.5rem);
+    font-weight: 600;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+  }
+
+  &__radio {
+    margin-inline-end: 1rem;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--switcher-color, gray);
+    border-radius: 2rem;
+    transition: 0.3s all;
+
+    &:before {
+      position: absolute;
+      content: '';
+      border-radius: 50%;
+      inline-size: 1.6rem;
+      block-size: 1.6rem;
+      left: 0.2rem;
+      bottom: 0.1rem;
+      background-color: var(--text-dop-color, white);
+      transition: 0.3s all;
+    }
+  }
+
+  &__switch-box {
+    margin-inline-start: 3rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__switch {
+    position: relative;
+    display: inline-block;
+    inline-size: 3.2rem;
+    block-size: 1.8rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    input:checked + .form__slider {
+      background-color: var(--switcher-active-color, orange);
+    }
+
+    input:focus + .form__slider {
+      box-shadow: 0 0 0.5rem var(--border-color, grey);
+    }
+
+    input:checked + .form__slider:before {
+      transform: translate3d(1.2rem, 0, 0);
+    }
+  }
+
+  &__input-box {
+    margin-inline-start: 3rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    display: flex;
+    align-items: flex-end;
+    color: var(--text-color, black);
+    font-size: var(--text-large, 1.5rem);
+    font-weight: 600;
+  }
+
+  &__input {
+    border: 0.1rem solid var(--border-color);
+    border-radius: 2rem;
+    color: var(--text-color, black);
+    font-size: var(--text-large, 1.5rem);
+    font-weight: 600;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-start: 0.3rem;
+    padding-block-end: 0.3rem;
+    margin-inline-end: 0.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0.5rem var(--border-color, grey);
+    }
+  }
+}

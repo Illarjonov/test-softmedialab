@@ -1,0 +1,33 @@
+html {
+  font: 10px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+:root {
+  --border-color: grey;
+  --text-dop-color: white;
+  --text-title-color: gray;
+  --button-bg-color: white;
+  --popup-bg-color: rgb(97, 90, 163);
+  --info-bg-color: rgb(255, 245, 202);
+  --text-color: black;
+  --error-color: red;
+  --warn-color: orange;
+  --switcher-color: rgb(219, 219, 219);
+  --switcher-active-color: orange;
+  --text-normal: 1.3rem;
+  --text-large: 1.5rem;
+}
+
+body {
+  font-size: 1.2rem;
+  margin: 3rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

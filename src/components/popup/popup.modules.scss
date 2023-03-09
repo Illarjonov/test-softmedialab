@@ -1,0 +1,54 @@
+.popup {
+  inline-size: max-content;
+  block-size: max-content;
+  position: relative;
+  display: flex;
+  &__button {
+    inline-size: 1.6rem;
+    block-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: 0.1rem solid var(--border-color, grey);
+    background-color: var(--button-bg-color, white);
+    color: var(--border-color, grey);
+    font-size: var(--text-normal, 1.3rem);
+    font-weight: 500;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0.5rem var(--border-color, grey);
+    }
+  }
+
+  &__button-text {
+    inline-size: 100%;
+    block-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+  }
+
+  &__content {
+    position: absolute;
+    transform: translate3d(0%, 0%, 0);
+    background-color: var(--popup-bg-color, purple);
+    inline-size: max-content;
+    max-inline-size: 22rem;
+    transform: translate3d(1rem, 2.5rem, 0);
+    display: flex;
+    z-index: 999;
+  }
+
+  &__content-text {
+    font-size: var(--text-normal, 1.3rem);
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+    inline-size: 100%;
+    color: var(--text-dop-color, white);
+  }
+}

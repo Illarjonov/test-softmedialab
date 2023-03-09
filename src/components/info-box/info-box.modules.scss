@@ -1,0 +1,20 @@
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--info-bg-color, #fbf4db);
+  padding: 3rem;
+  margin-block-start: 2rem;
+  max-inline-size: 30rem;
+
+  &__amount {
+    color: var(--text-color, black);
+    font-size: var(--text-large, 1.5rem);
+    font-weight: 600;
+    margin-inline-end: 0.5rem;
+  }
+
+  &__text {
+    color: var(--text-color, black);
+    font-size: var(--text-normal, 1.3rem);
+  }
+}

@@ -1,0 +1,35 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    inline-size: 12rem;
+    border: 0.1rem solid var(--border-color, grey);
+    border-radius: 2rem;
+    color: var(--text-color, black);
+    font-size: var(--text-large, 1.5rem);
+    font-weight: 600;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-start: 0.3rem;
+    padding-block-end: 0.3rem;
+    margin-inline-end: 0.5rem;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0.5rem var(--border-color, grey);
+    }
+  }
+
+  &__error{
+    margin-block-start: 0.5rem;
+    font-size: var(--text-normal, 1.3rem);
+    color: var(--error-color, red);
+  }
+
+  &__warn {
+    margin-block-start: 0.5rem;
+    font-size: var(--text-normal, 1.3rem);
+    color: var(--warn-color, orange);
+  }
+}
