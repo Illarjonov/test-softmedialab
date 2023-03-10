@@ -5,7 +5,7 @@ import './input.modules.scss'
 interface InputProps {
   input?: { [key: string]: any }
   placeholder?: string
-  type?: 'number' | 'text' | 'password'
+  type?: 'number' | 'text' 
 }
 
 const Input: FunctionComponent<InputProps> = ({
